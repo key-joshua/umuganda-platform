@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>insert</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body >
+
+<div class="header">
+	
+	<h2>Attendance Added Successfully</h2>
+
+</div>
+
+<form  >
+
+
+<div class="input-group">
+
+<h1>Successfully</h1>	
+	
+
+</div>
+<div id="result"> </div><br>
+<p>
+	
+	Wanna Make Attendance ? 
+	&nbsp;
+	<a href="attendance.php" style="color: #271c02; font-size: 20px;"  >Make Attendance Now !!</a>
+
+
+</p>
+
+</form>
+</body>
+</html>
