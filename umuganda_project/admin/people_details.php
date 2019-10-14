@@ -128,13 +128,23 @@ table tr{
 
 </h2>
 
-  </div> </div>
+  </div> 
+
+  <div class="reg" style="width: 13%; "> 
+
+<h2>
+
+  <a onclick="return confirm('Are you sure !! You want to Make Attendance ?')" style="color: #674d0d; font-size: 20px; " href="attendance.php" >Make Attendance</a>
+
+</h2>
+
+  </div>
 
   <div class="reg" style="width: 14%; "> 
 
 <h2>
 
-  <a onclick="return confirm('Are you sure !! You want to Make Attendance ?')" style="color: #674d0d; font-size: 20px; " href="attendance.php" >Make Attendance</a>
+  <a onclick="return confirm('Are you sure !! You want to Make Attendance ?')" style="color: #674d0d; font-size: 20px; " href="absent.php" >Absents Attendance</a>
 
 </h2>
 

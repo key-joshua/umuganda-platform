@@ -16,10 +16,6 @@ foreach($results1 as $resulta)
 
 }
 
-
-//DISPLAY PROFILES CODES
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -167,18 +163,22 @@ table th{
   <a onclick="return confirm('Are you sure you want to print report ?')" href="report.php?ID_NUMBER=<?= $resulta->ID_NUMBER ?>"style="color: #674d0d; font-size: 20px; " >Report</a>
 
 </h2>
+
+</div>
+<br>
+<div class="regs" style="width: 5%; "> 
+
+<h2>
+
+  <a onclick="return confirm('Are you sure you want to remind <?php   echo $resulta -> LAST_NAME   . ""; ?> ?')" href="sendsms.php?ID_NUMBER=<?= $resulta->ID_NUMBER ?>"style="color: #674d0d; font-size: 20px; " >Remind</a>
+
+</h2>
+
 </div>
 
 <div class="header" style=" color: #674d0d ;width: 76%"><h2>
 
 <?php   echo $resulta -> FIRST_NAME   . ""; ?>'s Attendance Details</h2></div>
-
-<!-- <form method="post" action="people_check_search.php" style="float: right;margin-right: 20px">
-<table border=0>
-<tr> <td><input type="text" name="search"></td>
-<td><input type="submit" name="search2" value="search"></td></tr>
-</table>
-</form> -->
 
   <table class="all_mentors" style="width: 80%;" border="5" align="center" > 
 
@@ -300,8 +300,7 @@ form{
 padding: 10px;
 font-size: 15px;
 color: white;
-background: #4c390c;/*
-border: none;*/
+background: #4c390c;
 border-radius: 5px;
 }
 
@@ -331,7 +330,7 @@ border-radius: 5px;
   </style>
 </head>
 <body >
-
+<br>
 <div class="headerS">
   
   <h2>Aprove Absent Charges</h2>
@@ -369,7 +368,7 @@ border-radius: 5px;
 <input type="text" name="CHARGES" value="500FRW" style="display: none;">  
 
 <div class="input-group">
-<button type="submit" name="submit" id="bt" class="btn">submit</button> 
+<button type="submit" name="submit" id="bt" class="btn" onclick="return confirm('Are you sure you want to Aprove <?php   echo $resulta -> LAST_NAME   . ""; ?> ?')">submit</button> 
 <button type="reset" name="reset" class="clear" id="clear">Clear</button> 
 
 </div>
