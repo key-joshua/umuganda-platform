@@ -131,7 +131,7 @@ if(!$admin->cekSession())
 
 <form method="post">
 
-		<label>User Name</label><br><br>
+		<label>User Name</label>
 		<input type="text" name="user" id="email"  >
 
 

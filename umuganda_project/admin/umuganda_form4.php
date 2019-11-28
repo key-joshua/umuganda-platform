@@ -49,8 +49,10 @@ $x->bindParam(':TELEPHONE',$TELEPHONE,PDO::PARAM_STR);
 $x->bindParam(':RESULT',$RESULT,PDO::PARAM_STR);
 $x -> execute(array($PROVINCE,$DISTRICT,$SECTOR,$CELL,$VILLAGE,$RECORD_DATE,$GENDER, $ID_NUMBER,$FIRST_NAME,$LAST_NAME,$TELEPHONE,$RESULT));
 if ($x) {
- echo '<h2> This User Added Successfull ..!! </h2>';
- } else {
+ header("location: new_user_bonus.php");
+ } 
+
+ else {
  echo '<p> Submission Failed..!!</p>';
  } 
  unset($_SESSION['post']); // Destroying session.

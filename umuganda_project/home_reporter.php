@@ -142,7 +142,9 @@
 
   
 
-  <a onclick="return confirm('Are you sure !! You want to Make Attendance ?')" style="color: #674d0d; font-size: 20px; " href="reporter/attendance.php" >Make Attendance</a>
+  <!-- <a onclick="return confirm('Are you sure !! You want to Make Attendance ?')" style="color: #674d0d; font-size: 20px; " href="reporter/attendance.php" >Make Attendance</a> -->
+
+    <a onclick="return confirm('Are you sure !! You want to Make Attendance ?')" style="color: #674d0d; font-size: 20px; " href="reporter/attendance_close.php" >Make Attendance</a>
 
 </h2>
 

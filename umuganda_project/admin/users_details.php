@@ -118,7 +118,7 @@ table tr{
 
   </div>
 
-  <div class="reg" style="width: 12%; "> 
+<!-- <div class="reg" style="width: 12%; "> 
 
 <h2>
 
@@ -126,7 +126,7 @@ table tr{
 
 </h2>
 
-  </div> </div>
+</div> -->
 
   <div class="reg" style="width: 14%; "> 
 

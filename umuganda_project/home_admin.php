@@ -138,13 +138,13 @@
 </h2>
 
   </div>
-
+<!-- 
    <div class="reg" style="width: 10%; "> 
 <h2>
 
   <a onclick="return confirm('Are you sure !! You want to add new people ?')" style="color: #674d0d; font-size: 20px; " href="admin/umuganda_form1.php" >Add New People</a>
 </h2>
-  </div>
+  </div> -->
 
   <div class="reg" style="width: 12%; "> 
 

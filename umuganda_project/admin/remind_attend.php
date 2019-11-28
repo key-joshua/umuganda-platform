@@ -5,10 +5,10 @@ $targeta =date("M");
 $targetb = date("d");
 $targetc = "PRESENT";
 $targetd = "ABSENT";
-$sql = 'SELECT * FROM umuganda_project LEFT JOIN user_results ON umuganda_project.ID_NUMBER=user_results.ID_NUMBER WHERE user_results.YEARS=:target AND user_results.MONTHS<=:targeta  AND user_results.DATES <> :targetb';
+$sql = 'SELECT * FROM umuganda_project';
 
 $statement = $db->prepare($sql);
-$statement->execute([':target' => $target, ':targeta' => $targeta,':targetb' => $targetb]);
+$statement->execute();
 $people = $statement->fetchAll(PDO::FETCH_OBJ);
  ?>
 
@@ -16,7 +16,7 @@ $people = $statement->fetchAll(PDO::FETCH_OBJ);
 <html>
 <head>
     
-  <title>All Absent People</title> 
+  <title>All Rwandan People</title> 
   <style type="text/css">
 
 
@@ -110,7 +110,7 @@ table tr{
         background: #aaaea2;">
 
 
-<div class="header"><h2>All Absent People</h2></div>
+<div class="header"><h2>All Rwandan People</h2></div>
 
 
 
@@ -138,24 +138,19 @@ table tr{
  <div class="regs" style="width: 5%; "> 
 <h2>
 
-<a onclick="return confirm('Are you sure you want to remind ?')" href="sendsmscharge.php?ID_NUMBER=<?php foreach($people as $result) echo $result -> ID_NUMBER   . ","  ?>&TELEPHONE=<?php foreach($people as $result) echo $result -> TELEPHONE   . ","  ?>"style="color: #674d0d; font-size: 20px; " >Remind</a> 
+<a onclick="return confirm('Are you sure you want to remind ?')" href="sendsmsremind.php?ID_NUMBER=<?php foreach($people as $result) echo $result -> ID_NUMBER   . ","  ?>&TELEPHONE=<?php foreach($people as $result) echo $result -> TELEPHONE   . ","  ?>"style="color: #674d0d; font-size: 20px; " >Remind</a> 
 
 </h2>
 </div>
 
-
 <div class="all_mentors" style="width: 46%">
-<h2>All Absent People</h2>
+<h2>All Rwandan People</h2>
   </div>
   <table class="table"style="width: 48%" border="5" align="center" > 
 
 <tr class="tr"> 
 <th class="th"> ID_NUMBER </th>
-<th class="th"> TELEPHONE </th> 
-<th class="th"> YEARS </th>
-<th class="th"> MONTHS </th>
-<th class="th"> DATES </th>
-<th class="th"> STATUS </th>  
+<th class="th"> TELEPHONE </th>  
 </tr>
 
 
@@ -164,10 +159,6 @@ table tr{
           <tr>
             <td><?= $person->ID_NUMBER; ?></td>
             <td><?= $person->TELEPHONE; ?></td>
-            <td><?= $person->YEARS; ?></td>
-            <td><?= $person->MONTHS; ?></td>
-            <td><?= $person->DATES; ?></td>
-            <td><?= $person->STATUS; ?></td>
           </tr>
         <?php endforeach; ?>
 

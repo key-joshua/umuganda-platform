@@ -132,7 +132,7 @@
    <div class="reg" style="width: 10%; "> 
 <h2>
 
-  <a onclick="return confirm('Are you sure !! You want to add new people ?')" style="color: #674d0d; font-size: 20px; " href="administration_office/umuganda_form1.php" >Add New People</a>
+  <a onclick="return confirm('Are you sure !! You want to add new people ?')" style="color: #674d0d; font-size: 20px; " href="agents/umuganda_form1.php" >Add New People</a>
 </h2>
   </div>
 
@@ -144,7 +144,7 @@
 
 <h2>
 
-  <a onclick="return confirm('Are you sure !! You want to Check Attendance ?')" style="color: #674d0d; font-size: 20px; " href="administration_office/people_details.php" >All people's Details</a>
+  <a onclick="return confirm('Are you sure !! You want to Check Attendance ?')" style="color: #674d0d; font-size: 20px; " href="agents/people_details.php" >All people's Details</a>
 
 </h2>
 

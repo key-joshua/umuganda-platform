@@ -120,7 +120,7 @@ table tr{
 
   </div>
 
-<!--   <div class="reg" style="width: 12%; "> 
+  <div class="reg" style="width: 12%; "> 
 
 <h2>
 
@@ -128,7 +128,7 @@ table tr{
 
 </h2>
 
-  </div>  -->
+  </div> 
 
   <div class="reg" style="width: 13%; "> 
 
@@ -183,7 +183,10 @@ table tr{
 </table>
 </form>
 
+ <div class="all_mentors" style="width: 15%;color: white ;background: #423107;">
+<h2>Message Sent Successfully</h2>
 
+  </div>
 
   <div class="all_mentors" style="width: 85.5%">
 <h2>All People's Details</h2>

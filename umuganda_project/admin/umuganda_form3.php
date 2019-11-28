@@ -38,8 +38,8 @@ if (isset($_POST['GENDER'])){
 //  $_SESSION['error_page2'] = '<div style="color:#ffffff;text-align: center;font-size:28px"> Please !! ID_NUMBER must be Only 16 digit.</div>';
 //  header("location: umuganda_form2.php");
 // }
-if (!preg_match("/^[0-9]{10}$/", $_POST['TELEPHONE'])) {
-	$_SESSION['error_page2'] = '<div style="color:#ffffff;text-align: center;font-size:28px"> Please !! Telephone number must be Only 10 digit.</div>';
+if (!preg_match("/^[0-9\+]{13}$/", $_POST['TELEPHONE'])) {
+	$_SESSION['error_page2'] = '<div style="color:#ffffff;text-align: center;font-size:28px"> Please !! Phone number should contain Country Code.</div>';
  header("location: umuganda_form2.php");
 }
  // Fetching all values posted from second page and storing it in variable.

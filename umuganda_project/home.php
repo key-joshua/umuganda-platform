@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<title>Free Mentors</title> 
+		<title>UMUGANDA ACTIVITY MANAGEMENT SYSTEM</title> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
 
@@ -161,7 +161,7 @@
 
 
 <footer class="foots"><br>
-  <h2>Free Mentors</h2>
+  <h2>UMUGANDA ACTIVITY MANAGEMENT SYSTEM</h2>
   <h3>Platform Developed By JOSUE BYIRINGIRO</h3>
 
 </footer>

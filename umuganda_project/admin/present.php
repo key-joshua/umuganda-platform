@@ -4,11 +4,10 @@ $target =date("Y");
 $targeta =date("M");
 $targetb = date("d");
 $targetc = "PRESENT";
-$targetd = "ABSENT";
-$sql = 'SELECT * FROM umuganda_project LEFT JOIN user_results ON umuganda_project.ID_NUMBER=user_results.ID_NUMBER WHERE user_results.YEARS=:target AND user_results.MONTHS<=:targeta  AND user_results.DATES <> :targetb';
+$sql = 'SELECT * FROM umuganda_project INNER JOIN user_results ON umuganda_project.ID_NUMBER=user_results.ID_NUMBER WHERE user_results.YEARS=:target AND user_results.MONTHS=:targeta  AND user_results.DATES=:targetb AND user_results.STATUS=:targetc';
 
 $statement = $db->prepare($sql);
-$statement->execute([':target' => $target, ':targeta' => $targeta,':targetb' => $targetb]);
+$statement->execute([':target' => $target, ':targeta' => $targeta,':targetb' => $targetb, ':targetc' => $targetc]);
 $people = $statement->fetchAll(PDO::FETCH_OBJ);
  ?>
 
@@ -16,7 +15,7 @@ $people = $statement->fetchAll(PDO::FETCH_OBJ);
 <html>
 <head>
     
-  <title>All Absent People</title> 
+  <title>All Attended People</title> 
   <style type="text/css">
 
 
@@ -110,7 +109,7 @@ table tr{
         background: #aaaea2;">
 
 
-<div class="header"><h2>All Absent People</h2></div>
+<div class="header"><h2>All Attended People</h2></div>
 
 
 
@@ -133,19 +132,17 @@ table tr{
 
 </h2>
 </div>
-
 <br>
  <div class="regs" style="width: 5%; "> 
 <h2>
 
-<a onclick="return confirm('Are you sure you want to remind ?')" href="sendsmscharge.php?ID_NUMBER=<?php foreach($people as $result) echo $result -> ID_NUMBER   . ","  ?>&TELEPHONE=<?php foreach($people as $result) echo $result -> TELEPHONE   . ","  ?>"style="color: #674d0d; font-size: 20px; " >Remind</a> 
+<a onclick="return confirm('Are you sure you want to Thank ?')" href="sendsmssuccess.php?ID_NUMBER=<?php foreach($people as $result) echo $result -> ID_NUMBER   . ","  ?>&TELEPHONE=<?php foreach($people as $result) echo $result -> TELEPHONE   . ","  ?>"style="color: #674d0d; font-size: 20px; " >Remind</a> 
 
 </h2>
 </div>
 
-
 <div class="all_mentors" style="width: 46%">
-<h2>All Absent People</h2>
+<h2>All Attended People</h2>
   </div>
   <table class="table"style="width: 48%" border="5" align="center" > 
 
